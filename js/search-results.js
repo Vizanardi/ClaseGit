@@ -1,0 +1,1 @@
+let resultados = document.querySelector(".buscar-form")
