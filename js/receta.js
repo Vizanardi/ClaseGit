@@ -14,9 +14,9 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         let nombre = document.querySelector("h1");
         nombre.innerText = data.name;
         let instrucciones = document.querySelector(".inspreparacion");
-        instrucciones.innerText = data.status;
+        instrucciones.innerText = data.instructions;
         let coccion = document.querySelector(".coccion");
-        coccion.innerText = data.species
+        coccion.innerText = data.prepTimeMinutes
         let imagen = document.querySelector("img");
         imagen.src = data.image;
     })
