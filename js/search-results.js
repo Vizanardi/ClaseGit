@@ -3,8 +3,8 @@ let resultados = document.querySelector(".buscar-form")
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 
-let buscador = queryStringObj.get("q");
-fetch('https://dummyjson.com/recipes/search?q=Margherita')
+let buscador = queryStringObj.get("buscar-form");
+fetch(`https://dummyjson.com/recipes/search?q=Margherita${buscador}`)
 .then(function(response){
     return response.json();
 })
