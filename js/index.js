@@ -20,7 +20,7 @@ fetch("https://dummyjson.com/recipes")
     if{
         let cargarMas = document.querySelector("button")
         cargarMas.addEventListener("click", function(){
-            
+    
         })
     }
 
