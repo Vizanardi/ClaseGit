@@ -19,6 +19,9 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         coccion.innerText = data.prepTimeMinutes
         let imagen = document.querySelector("img");
         imagen.src = data.image;
+        let categorias = document.querySelector(".categorias")
+        categorias.innerText = data.tags 
+        /*recorrerlo con for*/
     })
     .catch(function(error){
         console.log(error);
