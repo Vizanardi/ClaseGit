@@ -1,11 +1,16 @@
-let formulario = document.querySelector("form")
+let formulario = document.querySelector(".formulario")
 let email = document.querySelector("#email")
 let password = document.querySelector("#password")
 let errorEmail = document.querySelector(".email")
-let errorPassword = docuement.querySelector(".password")
+let errorPassword = document.querySelector(".password")
+
+console.log(formulario);
+
+
 formulario.addEventListener("submit", function(evento){
     evento.preventDefault()
-    if (email.value == " "){
+
+    if (email.value == ""){
         console.log("por favor complete el campo email")
         errorEmail.innerHTML = "<p>por favor complete el campo email</p>"
     }else if(password.value == " "){
