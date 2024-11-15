@@ -1,17 +1,25 @@
-let cantidadDeRecetas 
+let cantidadDeRecetas /* esto es para poer hacer que aparezcan mas*/
+
+/*parte del buscador*/
 let formulario = document.querySelector("form")
 let completaFormulario = document.querySelector("#buscador")
+let errorForm = document.querySelector(".error")
 
 formulario.addEventListener("submit", function(evento){
-    evento.preventDefault()
+    evento.preventDefault();
     if (completaFormulario.value == ""){
         console.log("buscador vacio")
-        completaFormulario.innerHTML = "<p>Complete el campo porfavor</p>"
-    }else if (formulario.value.length < 3)
-        completaFormulario.innerHTML = "<p>Que contenga al menos 3 caracteres</p>"
+        errorForm.innerText = "Complete el campo de busqueda"
+    }else if (completaFormulario.value.length < 4){
+        console.log("busqueda demasido corta")
+        errorForm.innerText = "Que contenga al menos 3 caracteres"
+    }else{
+        formulario.submit()
+    }  
 })
+/*------------------------------------------------------------------*/
 
-
+/*imagenes de las recetas e informacion*/
 fetch('https://dummyjson.com/recipes?limit=10')
 .then(function(response) {
   return response.json();
@@ -37,7 +45,8 @@ fetch('https://dummyjson.com/recipes?limit=10')
 .catch(function(error){
     console.log(error);
 })
-    
+   
+/*Al tocar cargar mas*/
 let cargarMas = document.querySelector(".cargarMas")
     cargarMas.addEventListener("click", function(){
         fetch(`https://dummyjson.com/recipes?limit=10&skip=${cantidadDeRecetas}`)
