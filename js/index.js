@@ -17,6 +17,12 @@ fetch("https://dummyjson.com/recipes")
     console.log(receta)
 }
     infoReceta.innerHTML = receta;
+    if{
+        let cargarMas = document.querySelector("button")
+        cargarMas.addEventListener("click", function(){
+            
+        })
+    }
 
 })
 
