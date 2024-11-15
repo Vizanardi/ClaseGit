@@ -15,15 +15,19 @@ fetch("https://dummyjson.com/recipes")
                 <p> <a href= "./receta.html"></a> Ver mas </p>
             </article>`;
     console.log(receta)
-}
+} })
     infoReceta.innerHTML = receta;
-    if{
-        let cargarMas = document.querySelector("button")
-        cargarMas.addEventListener("click", function(){
     
-        })
-    }
-
-})
+    let cargarMas = document.querySelector("button")
+    cargarMas.addEventListener("click", function(){
+        for (i=10; i<20; i++ ){
+            receta += `<article>
+                    <img src="${data.results[i].image}" alt="" class="" class="">
+                    <h2>${data.results[i].name}</h2>
+                    <p>Nivel de dificultad: ${data.results[i].difficulty}</p>
+                    <p> <a href= "./receta.html"></a> Ver mas </p>
+                </article>`;
+        console.log(receta)
+    } })
 
 
