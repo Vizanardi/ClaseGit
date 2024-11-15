@@ -1,4 +1,4 @@
-let formulario = document.querySelector(".formulario")
+let formulario = document.querySelector(".loginform")
 let email = document.querySelector("#email")
 let password = document.querySelector("#password")
 let errorEmail = document.querySelector(".email")
