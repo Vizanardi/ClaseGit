@@ -1,3 +1,23 @@
+/*parte del buscador*/
+let formulario = document.querySelector("form")
+let completaFormulario = document.querySelector("#buscador")
+let errorForm = document.querySelector(".error")
+
+formulario.addEventListener("submit", function(evento){
+    evento.preventDefault();
+    if (completaFormulario.value == ""){
+        console.log("buscador vacio")
+        errorForm.innerText = "Complete el campo de busqueda"
+    }else if (completaFormulario.value.length < 4){
+        console.log("busqueda demasido corta")
+        errorForm.innerText = "Que contenga al menos 3 caracteres"
+    }else{
+        formulario.submit()
+    }  
+})
+/*------------------------------------------------------------------*/
+
+
 let queryString = location.search; //esto nos devuelve la inormacion que sacamos del api o de la pagina en un formato no legible 
 let queryStringObjeto = new URLSearchParams(queryString); //este new Url.. lo que hace es que se convierta en un objeto y pueda ser manejado despues con get por ejemplo
 
