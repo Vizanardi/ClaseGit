@@ -1,21 +1,24 @@
 let queryString = location.search; 
 let queryStringObjeto = new URLSearchParams(queryString); 
 
-let detallescateg = queryStringObjeto.get(data); 
+let detallescateg = queryStringObjeto.get("categoria"); 
 
 console.log(detallescateg);
 
-/*fetch(`https://dummyjson.com/recipes/tag/${detallescateg}`)
+let titulo = document.querySelector("h1");
+titulo.innerText = detallescateg
+
+fetch(`https://dummyjson.com/recipes/tag/${detallescateg}`)
 .then(function(response) {
   return response.json();
 })
 
 .then(function(data){
     console.log(data);
-    let infoReceta = document.querySelector(".info-recetas")
+    let infoReceta = document.querySelector(".recetas_category")
     let receta = "";
     cantidadDeRecetas = data.recipes.length
-    for (i=0; i<data.recipes.length; i++){
+    for (i=0; i<cantidadDeRecetas; i++){
         receta += `<article>
                 <img src=${data.recipes[i].image} alt="">
                 <h2>${data.recipes[i].name}</h2>
@@ -29,4 +32,4 @@ console.log(detallescateg);
 
 .catch(function(error){
     console.log(error);
-})*/
+})
