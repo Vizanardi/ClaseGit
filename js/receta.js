@@ -14,7 +14,11 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         let nombre = document.querySelector("h1");
         nombre.innerText = data.name;
         let instrucciones = document.querySelector(".inspreparacion");
-        instrucciones.innerText = data.instructions;
+        let instruOrdenado = ""
+        for (i=0; i<data.instructions.length; i++){
+            instruOrdenado+=`<li>${data.instructions[i]}</li>`
+        }
+        instrucciones.innerHTML= instruOrdenado
         let coccion = document.querySelector(".coccion");
         coccion.innerText = data.prepTimeMinutes
         let imagen = document.querySelector("img");
@@ -26,3 +30,6 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
     .catch(function(error){
         console.log(error);
     })
+
+
+/* instrucciones.innerText = data.instructions;*/
