@@ -24,7 +24,11 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         let imagen = document.querySelector("img");
         imagen.src = data.image;
         let categorias = document.querySelector(".categorias")
-        categorias.innerText = data.tags 
+        let categ = ""
+        for (i=0; i<data.tags.length; i++){
+            categ+=`<li> <a href = "categorias.html">${data.tags[i]}</a></li>`
+        }
+        categorias.innerHTML= categ
         /*recorrerlo con for*/
     })
     .catch(function(error){
