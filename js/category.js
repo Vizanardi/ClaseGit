@@ -8,7 +8,7 @@ formulario.addEventListener("submit", function(evento){
     if (completaFormulario.value == ""){
         console.log("buscador vacio")
         errorForm.innerText = "Complete el campo de busqueda"
-    }else if (completaFormulario.value.length < 4){
+    }else if (completaFormulario.value.length < 3){
         console.log("busqueda demasido corta")
         errorForm.innerText = "Que contenga al menos 3 caracteres"
     }else{
