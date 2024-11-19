@@ -21,9 +21,9 @@ let resultados = document.querySelector(".search-results")
 
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
+let buscador = queryStringObj.get("form");
 
-let buscador = queryStringObj.get("buscar-form");
-fetch(`https://dummyjson.com/recipes/search?q=Margherita${buscador}`)
+fetch(`https://dummyjson.com/recipes/search/?name=${buscador}`)
 .then(function(response){
     return response.json();
 })
