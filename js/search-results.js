@@ -23,7 +23,7 @@ let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let buscador = queryStringObj.get("form");
 
-fetch(`https://dummyjson.com/recipes/search/?name=${buscador}`)
+fetch(`https://dummyjson.com/recipes/search?q=${buscador}`)
 .then(function(response){
     return response.json();
 })
@@ -31,13 +31,20 @@ fetch(`https://dummyjson.com/recipes/search/?name=${buscador}`)
     console.log(data);
     let infoReceta = document.querySelector(".search-results")
     let receta = ""
-    for (i=0; i<data.recipes.length; i++ ){
-        receta += `<article>
-                <img src="${data.recipes[i].image}" alt="${data.recipes[i].name}">
-                <h2>${data.recipes[i].name}</h2>
-                <p> <a href= "./receta.html?id=${data.recipes[i].id}"> Ver mas </a></p>
-            </article>`;
-     
+    if (data.recipes.length == 0){
+        let terminoBuscado = document.querySelector("h1")
+        terminoBuscado.innerText = `No se ha encontrado ningun resultado con ${buscador}`
+    }else{
+        let terminoBuscado = document.querySelector("h1")
+        terminoBuscado.innerText = `Resultados de búsqueda para: ${buscador}`
+        for (i=0; i<data.recipes.length; i++ ){
+            receta += `<article>
+                    <img src="${data.recipes[i].image}" alt="${data.recipes[i].name}">
+                    <h2>${data.recipes[i].name}</h2>
+                    <p> <a href= "./receta.html?id=${data.recipes[i].id}"> Ver mas </a></p>
+                </article>`;
+         
+        }
     }
     console.log(receta)
     infoReceta.innerHTML = receta;
@@ -47,11 +54,7 @@ fetch(`https://dummyjson.com/recipes/search/?name=${buscador}`)
 })
 
 /*
-La lista de resultados que coincidan con el término buscado. Cada resultado debe mostrar:
-Foto
-Título
-Link para ir al detalle.
+El término buscado. Ejemplo: “ término ingresado en el input.”
 Para el caso de no haber resultados que coincidan con el término buscado la página debe avisar al usuario que no hay coincidencias.
 */ 
 
-/*TERMINAR DE CORREGIR ESTO PORQUE APARECE CUALQUIERA ME PA*/
