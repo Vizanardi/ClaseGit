@@ -4,11 +4,11 @@
 header{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(96, 211, 109, 0.638);
+    background-image: url('https://i.pinimg.com/control2/736x/72/e1/75/72e175e702d16ebf00048e0bcc9ce5ff.jpg');
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0px;
+    padding: 20px 0px;
     width: 100%;
     margin: 0px
 }
@@ -41,7 +41,7 @@ a{
 
 header img{
     justify-content: center;
-    width: 100px;
+    width: 110px;
     margin-left: 0px;
     
 }
@@ -52,6 +52,9 @@ header img{
     margin: 0;
     padding: 0;
     width: 100%;
+    background-image: url('https://i.pinimg.com/control2/736x/72/e1/75/72e175e702d16ebf00048e0bcc9ce5ff.jpg');
+    border: none;
+
 }
 
 #buscador{
@@ -115,6 +118,7 @@ h1{
     display: flex;
     text-align: center;
     justify-content: center;
+    color: rgb(255, 124, 126);
 }
 
 .tituloReceta{
@@ -122,7 +126,7 @@ h1{
     font-size: 20px;
 }
 
-p{
+p a{
    display: flex; 
    font-size: 15px;
 }
@@ -155,10 +159,16 @@ form{
 /* Categorias ------------------------------------------------------------*
 
 
-/* Search-results ------------------------------------------------------------*
+/* Search-results ------------------------------------------------------------*/
+.search-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
 
-
-Login ------------------------------------------------------------
+/*Login ------------------------------------------------------------*/
 
 
 /* Register ------------------------------------------------------------*
