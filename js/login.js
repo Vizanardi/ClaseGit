@@ -17,24 +17,20 @@ formulario.addEventListener("submit", function(evento){
 })
 /*------------------------------------------------------------------*/
 
-let loginform = document.querySelector("form")
+let form_login = document.querySelector("form")
 let email = document.querySelector("#email")
-let errorEmail = document.querySelector(".errorEmail")
 let password = document.querySelector("#password")
-let errorPassword = document.querySelector(".errorPassword")
 
-loginform.addEventListener("submit", function(evento){
-    evento.preventDefault()
-    console.log("Eventento prevenenido")
-    if (email.value == ""){
-        console.log("Por favor complete el campo email");
-        errorEmail.innerHTML = "<p>Por favor complete el campo email</p>";
-        errorEmail.style.display = "block";
-    }else if(password.value == ""){
-        console.log("Por favor complete el campo contraseña");
-        errorPassword.innerHTML = "<p>Por favor complete el campo contraseña</p>";
-        errorPassword.style.display = "block";
+form_login.addEventListener("submit", function(evento){
+    evento.preventDefault();
+    if (email.value === ""){
+        console.log("Complete el email")
+        alert("Por favor complete su email");
+    }else if (password.value === ""){
+        console.log("Complet la contraseña")
+        alert("porfavor complete su contraseña")
     }else{
-        this.submit()
+        console.log("formulario enviado")
+        form_login.submit()
     }
 })
