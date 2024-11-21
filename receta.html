@@ -2,21 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"  content="width= device-width, initial-scale=1.0">
-    <title>Receta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styless.css">
+    <!--Font del titulo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!--Font del titulo-->
+    <title>Home</title>
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="categorias.html"> Categorias </a></li>
-                <li><a href="login.html"> Log in </a></li>
-                <li><a href="register.html"> Registrarme </a></li>
+                <li><a class="navegador" href="index.html"> Home </a></li>
+                <li><a class="navegador" href="categorias.html"> Categorias </a></li>
+                <li><a class="navegador" href="login.html"> Log in </a></li>
+                <li><a class="navegador" href="register.html"> Registrarme </a></li>
             </ul>
         </nav>
 
-            <img class = "logo" src="../LOgo.png" alt="Logo"> 
+            <img class = "logo" src="./img/Imagen 21-11-24 a las 5.00 p. m..JPEG" alt="Logo"> 
             
         <div>
             <form class="buscadorHeader" action="search-results.html" method="get">
@@ -30,10 +37,8 @@
                     PREGUNTAR
                     -->
         </div>
-    
-               
-
     </header>
+
     <main>
         <img src="" alt="">
         <h1></h1>
@@ -41,9 +46,14 @@
         <p class="coccion">Tiempo de coccion</p>
         <p class="categorias"></p>
     </main>
+    
     <footer>
-        
-    </footer>
+        <p>©Paramount Cooking. Las recetas son propiedad de sus respectivos
+         dueños. Paramount Cooking MSV. La sede se encuentra en el corazon de tu casa,
+         la cocina. </P>
+ 
+         <p>Designed by Martina Serra, Sofia Keser and Victoria Zanardi</p>
+     </footer>
     <script src="./js/receta.js" ></script>
 </body>
 </html>
