@@ -27,12 +27,12 @@ loginform.addEventListener("submit", function(evento){
     evento.preventDefault()
     console.log("Eventento prevenenido")
     if (email.value == ""){
-        console.log("por favor complete el campo email");
-        errorEmail.innerHTML = "<p>por favor complete el campo email</p>";
+        console.log("Por favor complete el campo email");
+        errorEmail.innerHTML = "<p>Por favor complete el campo email</p>";
         errorEmail.style.display = "block";
     }else if(password.value == ""){
-        console.log("por favor complete el campo contraseña");
-        errorPassword.innerHTML = "<p>por favor complete el campo contraseña</p>";
+        console.log("Por favor complete el campo contraseña");
+        errorPassword.innerHTML = "<p>Por favor complete el campo contraseña</p>";
         errorPassword.style.display = "block";
     }else{
         this.submit()
