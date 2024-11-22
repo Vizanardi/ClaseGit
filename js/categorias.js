@@ -36,7 +36,7 @@ fetch('https://dummyjson.com/recipes/tags')
     })
 
 
-fetch('https://dummyjson.com/recipes')
+/*fetch('https://dummyjson.com/recipes')
     .then(function(response){
         return response.json();
     })
@@ -59,4 +59,6 @@ fetch('https://dummyjson.com/recipes')
         })
     .catch(function(error){
         console.log(error);
-    })
+    })*/
+
+        

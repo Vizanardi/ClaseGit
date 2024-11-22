@@ -41,7 +41,7 @@ fetch(`https://dummyjson.com/recipes/search?q=${buscador}`)
             receta += `<article class="article_index">
                     <img src=${data.recipes[i].image} alt="">
                     <h2 class="tituloReceta">${data.recipes[i].name}</h2>
-                    <p>Nivel de dificultad: ${data.recipes[i].difficulty}</p>
+                    <p class="dificultad">Nivel de dificultad: ${data.recipes[i].difficulty}</p>
                     <p> <a class="verMas" href= "./receta.html?id=${data.recipes[i].id}"> Ver mas </a></p>
                 </article>`;
          
