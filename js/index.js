@@ -31,7 +31,7 @@ fetch('https://dummyjson.com/recipes?limit=10')
     let receta = "";
     cantidadDeRecetas = data.recipes.length
     for (i=0; i<data.recipes.length; i++){
-        receta += `<article>
+        receta += `<article class="article_index">
                 <img src=${data.recipes[i].image} alt="${data.recipes[i].name}">
                 <h2 class="tituloReceta">${data.recipes[i].name}</h2>
                 <p>Nivel de dificultad: ${data.recipes[i].difficulty}</p>
@@ -59,7 +59,7 @@ let cargarMas = document.querySelector(".cargarMas")
             let infoReceta = document.querySelector(".info-recetas")
             let receta = "";
             for (i=0; i<data.recipes.length; i++){
-                receta += `<article>
+                receta += `<article class="article_index">
                         <img src=${data.recipes[i].image} alt="">
                         <h2 class="tituloReceta">${data.recipes[i].name}</h2>
                         <p>Nivel de dificultad: ${data.recipes[i].difficulty}</p>

@@ -34,22 +34,23 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         let nombre = document.querySelector("h1");
         nombre.innerText = data.name;
         let instrucciones = document.querySelector(".inspreparacion");
-        let instruOrdenado = ""
+        let instruOrdenado = "<strong>Instrucciones:</strong>"
         for (i=0; i<data.instructions.length; i++){
             instruOrdenado+=`<li>${data.instructions[i]}</li>`
         }
         instrucciones.innerHTML= instruOrdenado
         let coccion = document.querySelector(".coccion");
-        coccion.innerText = data.prepTimeMinutes
+        let coccionprep = data.prepTimeMinutes
+        coccion.innerText = `Tiempo de coccion: ${coccionprep}`
         let imagen = document.querySelector(".imagen");
         imagen.src = data.image;
         let categorias = document.querySelector(".categorias")
-        let categ = ""
+        let categ = "<strong>Categorias:</strong>"
         for (i=0; i<data.tags.length; i++){
-            categ+=`<li> <a href = "categorias.html">${data.tags[i]}</a></li>`
+            categ+=`<li> <a class="cat" href = "categorias.html">${data.tags[i]}</a></li>`
         }
         categorias.innerHTML= categ
-        /*recorrerlo con for*/
+
     })
     .catch(function(error){
         console.log(error);
