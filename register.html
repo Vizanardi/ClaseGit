@@ -29,24 +29,19 @@
             <form class="buscadorHeader" action="search-results.html" method="get">
                 <input type="text" name="form"  id="buscador" placeholder="Escriba aqui...">
                 <button class="submit" type="submit">SEARCH</button>
-                <p class="error"></p>
             </form>
-                <!--El buscador deberá validar:
-                    Que el campo no esté vacío. Si está vacío avisarle por pantalla al usuario.
-                    Que el término buscado tenga al menos 3 caracteres. Si no los tiene avisar por pantalla al usuario.
-                    PREGUNTAR
-                    -->
+            <div class="error"></div>
         </div>
     </header>
 
 <body>
-    <form class="formulario" action="./login.html" method="get"> 
+    <form class="form_register" action="./login.html" method="get"> 
        <label for="email">Email:</label>
        <input type="email" placeholder="Email" name="Email" id="email" value= "">
-       <div class="error email"></div>
+       <div class="error_email"></div>
        <label for="password">Contraseña:</label>
        <input type="password" placeholder="Contraseña" name="password" id="password" value= "" >
-       <div class="error password"></div>
+       <div class="error_password"></div>
        <label for="">Terminos y condiciones</label>
        <input type="checkbox" name="Terminos y condiciones" id="" >
        <button class="button">Enviar</button>

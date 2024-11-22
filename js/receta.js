@@ -41,7 +41,7 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         instrucciones.innerHTML= instruOrdenado
         let coccion = document.querySelector(".coccion");
         coccion.innerText = data.prepTimeMinutes
-        let imagen = document.querySelector("img");
+        let imagen = document.querySelector(".imagen");
         imagen.src = data.image;
         let categorias = document.querySelector(".categorias")
         let categ = ""
