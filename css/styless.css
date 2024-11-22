@@ -532,58 +532,22 @@ h3{
 
     /* Recetas ------------------------------------------------------------*/
     .imagen{
-        border-radius: 20px;
-        width: 40%;
-    }
-    
-    .mainrecetas{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 115px;
+        width: 90%;
+        align-self: center;
+        margin-left: 18px;
     }
     
     .sectionrecetas{
-        display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
-        border: 2px solid #d3d3d3;
         border-radius: 10px;
         padding: 20px;
-        width: 60%;
+        width: 85%;
         margin-top: 20px;
+        justify-content: center;
     }
     
     .article-instrucciones{
-        padding: 5px;
-        margin: 10px;
-        width: 350px;
         font-size: 15px;
-    
-         /*font*/
-         font-family: "Noto Sans", sans-serif;
-         font-style: normal;
     }
     
-    
-    .cat{
-        color:rgb(255, 124, 126);
-        font-weight: bold;
-        margin: 5px;
-    }
-    
-    .inspreparacion{
-        justify-content: space-between;
-        text-align: left;
-        display: flex;
-        flex-wrap: wrap;
-        list-style: circle;
-    }
-    
-    .coccion{
-        text-align: left;
-        padding: 10px;
-        margin-left: 30px;
-    }
-
 }
