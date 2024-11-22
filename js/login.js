@@ -15,7 +15,7 @@ formulario.addEventListener("submit", function(evento){
         formulario.submit()
     }  
 })
-/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------ preguntar por que no funciona, y como poner alert*/
 
 let form_login = document.querySelector("form")
 let email = document.querySelector("#email")

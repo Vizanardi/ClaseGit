@@ -106,17 +106,19 @@ footer{
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     width: 100%;
     background-color: rgba(255, 124, 126, 0.496);
     border: none;
+    justify-content: center;
 }
 
 footer p{
-    display: flex;
     flex-direction: column;
     padding: 3px;
     margin-left: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Index ------------------------------------------------------------*/
@@ -181,9 +183,14 @@ h3{
     text-align: center;
     justify-content: center;
     margin-bottom: 10px;
+}
+
+.cargarMass{
     color: black;
     background-color: white;
     border-radius: 15px;
+    padding: 10px;
+    border: 2px solid #d3d3d3;
 }
 
 form{
@@ -199,13 +206,41 @@ form{
     justify-items: center;
 }
 
-/* Receta ------------------------------------------------------------*
+/* Categorias ------------------------------------------------------------*/
+
+.tituloCategorias{
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    color: rgb(255, 124, 126);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 5px;
+}
+
+.listaCategorias{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.categoriasInd{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 10px; 
+}
+
+.cat{
+    color: rgb(255, 124, 126);
+    font-weight: bold;
+}
+
+/* Receta ------------------------------------------------------------*/
 
 
-/* Category ------------------------------------------------------------*
+/* Category ------------------------------------------------------------*/
 
-
-/* Categorias ------------------------------------------------------------*
 
 
 /* Search-results ------------------------------------------------------------*/
@@ -220,4 +255,4 @@ form{
 /*Login ------------------------------------------------------------*/
 
 
-/* Register ------------------------------------------------------------*
+/* Register ------------------------------------------------------------*/

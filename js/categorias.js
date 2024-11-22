@@ -27,7 +27,36 @@ fetch('https://dummyjson.com/recipes/tags')
         let listaCategorias= document.querySelector(".listaCategorias");
         let cateOrdenadas = "";
         for (i=0; i<data.length; i++){
-            cateOrdenadas+=`<li><a href="./category.html?categoria=${data[i]}">${data[i]}</a></li>` /*Con ese signito de pregunta es para que agarre la categoria que clickeas, ponele si tocas pizza manda a pizza*/
+            cateOrdenadas+=`<p class="categoriasInd"><a class="cat" href="./category.html?categoria=${data[i]}">${data[i]}</a></p>` /*Con ese signito de pregunta es para que agarre la categoria que clickeas, ponele si tocas pizza manda a pizza*/
             listaCategorias.innerHTML = cateOrdenadas
         }
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+
+
+fetch('https://dummyjson.com/recipes')
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        for (i=0; i<data.recipes.length; i++){
+            let identificador = queryStringObjeto.get('id')}
+            fetch(`https://dummyjson.com/recipes/${identificador}`)
+                .then(function(response){
+                    return response.json();
+                })
+                .then(function(data){
+                    console.log(data);
+                    let imagen = document.querySelector(".fotoCategoria");
+                    imagen.src = data.image;
+                    })
+                .catch(function(error){
+                    console.log(error);
+                })
+        })
+    .catch(function(error){
+        console.log(error);
     })
