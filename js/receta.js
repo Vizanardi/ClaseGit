@@ -18,10 +18,10 @@ formulario.addEventListener("submit", function(evento){
 /*------------------------------------------------------------------*/
 
 
-let queryString = location.search; //esto nos devuelve la inormacion que sacamos del api o de la pagina en un formato no legible 
-let queryStringObjeto = new URLSearchParams(queryString); //este new Url.. lo que hace es que se convierta en un objeto y pueda ser manejado despues con get por ejemplo
+let queryString = location.search;
+let queryStringObjeto = new URLSearchParams(queryString);
 
-let identificador = queryStringObjeto.get('id'); //CHEQUEAR SI ES ID de esta manera podemos usar el get y obtener ese dato (id) del array de informacion que sacamos de la web
+let identificador = queryStringObjeto.get('id');
 
 console.log(identificador);
 
@@ -55,6 +55,3 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
     .catch(function(error){
         console.log(error);
     })
-
-
-/* instrucciones.innerText = data.instructions;*/

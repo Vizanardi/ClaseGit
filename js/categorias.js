@@ -17,7 +17,6 @@ formulario.addEventListener("submit", function(evento){
 })
 /*------------------------------------------------------------------*/
 
-
 fetch('https://dummyjson.com/recipes/tags')
     .then(function(response){
      return response.json();
@@ -34,31 +33,3 @@ fetch('https://dummyjson.com/recipes/tags')
     .catch(function(error){
         console.log(error);
     })
-
-
-/*fetch('https://dummyjson.com/recipes')
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        console.log(data);
-        for (i=0; i<data.recipes.length; i++){
-            let identificador = queryStringObjeto.get('id')}
-            fetch(`https://dummyjson.com/recipes/${identificador}`)
-                .then(function(response){
-                    return response.json();
-                })
-                .then(function(data){
-                    console.log(data);
-                    let imagen = document.querySelector(".fotoCategoria");
-                    imagen.src = data.image;
-                    })
-                .catch(function(error){
-                    console.log(error);
-                })
-        })
-    .catch(function(error){
-        console.log(error);
-    })*/
-
-        

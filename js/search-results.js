@@ -54,8 +54,3 @@ fetch(`https://dummyjson.com/recipes/search?q=${buscador}`)
     console.log(error);
 })
 
-/*
-El término buscado. Ejemplo: “ término ingresado en el input.”
-Para el caso de no haber resultados que coincidan con el término buscado la página debe avisar al usuario que no hay coincidencias.
-*/ 
-
