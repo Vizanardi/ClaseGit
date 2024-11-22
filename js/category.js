@@ -38,7 +38,7 @@ fetch(`https://dummyjson.com/recipes/tag/${detallescateg}`)
     let receta = "";
     cantidadDeRecetas = data.recipes.length
     for (i=0; i<cantidadDeRecetas; i++){
-        receta += `<article>
+        receta += `<article class="article_index">
                 <img src=${data.recipes[i].image} alt="">
                 <h2 class="tituloReceta">${data.recipes[i].name}</h2>
                 <p>Nivel de dificultad: ${data.recipes[i].difficulty}</p>

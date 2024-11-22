@@ -38,7 +38,7 @@ fetch(`https://dummyjson.com/recipes/search?q=${buscador}`)
         let terminoBuscado = document.querySelector("h1")
         terminoBuscado.innerText = `Resultados de búsqueda para: ${buscador}`
         for (i=0; i<data.recipes.length; i++ ){
-            receta += `<article>
+            receta += `<article class="article_index">
                     <img src=${data.recipes[i].image} alt="">
                     <h2 class="tituloReceta">${data.recipes[i].name}</h2>
                     <p>Nivel de dificultad: ${data.recipes[i].difficulty}</p>
