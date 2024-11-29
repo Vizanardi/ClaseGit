@@ -47,7 +47,7 @@ fetch(`https://dummyjson.com/recipes/${identificador}`)
         let categorias = document.querySelector(".categorias")
         let categ = "<strong>Categorias:</strong>"
         for (i=0; i<data.tags.length; i++){
-            categ+=`<li> <a class="cat" href = "categorias.html">${data.tags[i]}</a></li>`
+            categ+=`<li> <a class="cat" href="./category.html?categoria=${data.tags[i]}">${data.tags[i]}</a></li>`
         }
         categorias.innerHTML= categ
 
